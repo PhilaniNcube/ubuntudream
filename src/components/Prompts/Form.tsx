@@ -49,7 +49,7 @@ const Form = () => {
           image: generation.output
         })
         console.log(generation)
-          setIsLoading(true);
+          setIsLoading(false);
 
       };
 
@@ -72,10 +72,21 @@ const Form = () => {
         <Button label="Generate" disabled={isLoading} type="submit" />
       </form>
       <div className="w-full mt-4">
-        {isLoading && <div className="h-12">
-            <p className="text-lg font-bold text-zinc-700">Generating your image...</p>
-          </div>}
-        <Image src={output.image} width={500} height={500} alt={output.text} className="w-3/4 mx-auto aspect-square object-cover" />
+        {isLoading && (
+          <div className="h-12">
+            <p className="text-lg font-bold text-zinc-700">
+              Generating your image...
+            </p>
+          </div>
+        ) }
+        <Image
+          src={output.image}
+          width={500}
+          height={500}
+          alt={output.text}
+          className="w-3/4 mx-auto aspect-square object-cover"
+        />
+        <p className="text-lg font-bold text-zinc-700 mt-4">{output.text}</p>
       </div>
     </div>
   );
