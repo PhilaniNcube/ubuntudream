@@ -43,6 +43,15 @@ const Form = () => {
           body: JSON.stringify(data),
         })
 
+        if(res.status !== 200) {
+          setIsLoading(false);
+           setOutput({
+            ...output,
+            text: "Image generation failed please try again",
+           });
+           return;
+        }
+
         const generation = await res.json();
         setOutput({
           text: data.prompt,
