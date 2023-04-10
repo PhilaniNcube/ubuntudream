@@ -6,7 +6,7 @@ export async function POST(request: Request ) {
   const { prompt } = await request.json()
   const model = "stability-ai/stable-diffusion:9936c2001faa2194a261c01381f90e65261879985476014a0a37a334593a05eb"
   const input = {
-    prompt:`mdjrny-v4 style, ${prompt}`,
+    prompt:`mdjrny-v4 style, volumetric lighting, octane render, 4 k resolution, ${prompt}`,
     height: 1024,
     width: 1024,
     num_interface_steps: 150,
