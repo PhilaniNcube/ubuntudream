@@ -1,6 +1,11 @@
 import replicate from "@/lib/replicate"
 import { NextResponse } from "next/server"
 
+export const config = {
+  runtime: 'edge',
+}
+
+
 export async function POST(request: Request ) {
 
   const { prompt } = await request.json()
