@@ -46,7 +46,7 @@ const Form = () => {
         const generation = await res.json();
         setOutput({
           text: data.prompt,
-          image: generation.output
+          image: generation.output[0]
         })
         console.log(generation)
           setIsLoading(false);
