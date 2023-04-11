@@ -276,10 +276,10 @@ const PortraitForm = () => {
         <div className="relative group w-full lg:w-2/4 mx-auto">
           <Image
             src={output.image}
-            width={500}
-            height={500}
+            width={768}
+            height={1024}
             alt="Output"
-            className="w-full mx-auto aspect-square object-cover"
+            className="w-full mx-auto object-cover"
           />
           <p className="absolute bottom-4 left-3 text-lg group-hover:bg-slate-600/40 group-hover:text-slate-50 transition px-4 py-2 font-bold text-zinc-700 mt-4">
             {output.text}
