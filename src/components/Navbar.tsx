@@ -9,6 +9,11 @@ const Navbar = () => {
         </div>
 
 
+       <div className="flex items-center space-x-3">
+        <Link href="/" className="text-lg text-zinc-600 font-medium">Home</Link>
+        <Link href="/portraits" className="text-lg text-zinc-600 font-medium">Portraits</Link>
+       </div>
+
       </div>
     </nav>
   );
