@@ -11,8 +11,8 @@ export async function POST(request: Request ) {
   const { scene, subject, race,  } = await request.json()
   const model = "cjwbw/portraitplus:629a9fe82c7979c1dab323aedac2c03adaae2e1aecf6be278a51fde0245e20a4"
   const input = {
-    prompt:`portrait+ style photograph of a ${race} ${subject} in a ${scene} setting. ultra detailed, photo realistic face, 4k resolution, volumetric lighting, octane render`,
-    negative_prompt: "painted illustration, deformed limbs, nsfw, ugly",
+    prompt:`portrait+ style photograph of a ${race}, ${subject} in a ${scene} setting. ultra detailed, photo realistic face, 4k resolution, volumetric lighting`,
+    negative_prompt: "painted illustration, deformed limbs, nsfw, ugly, deformed lips, cleft palette",
     width: 512,
     height: 512,
     }
